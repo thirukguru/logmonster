@@ -1,11 +1,11 @@
 #!/bin/bash
 # Log Monster Detector - Installation Script
-# Usage: curl -sSL https://raw.githubusercontent.com/thiruk/logmonster/main/install.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/thirukguru/logmonster/main/install.sh | bash
 
 set -e
 
 # Configuration
-REPO="thiruk/logmonster"
+REPO="thirukguru/logmonster"
 BINARY_NAME="logmonster"
 INSTALL_DIR="${INSTALL_DIR:-/usr/local/bin}"
 
