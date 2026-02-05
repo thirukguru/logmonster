@@ -1,6 +1,6 @@
 # Log Monster Detector 🦖
 
-A lightweight CLI utility for Linux that detects processes and services writing excessively to log files and consuming disk space.
+A lightweight CLI utility for Linux/MacOS that detects processes and services writing excessively to log files and consuming disk space.
 
 ## Features
 
