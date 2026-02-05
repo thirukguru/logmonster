@@ -16,13 +16,13 @@ A lightweight CLI utility for Linux that detects processes and services writing 
 ### Quick Install (Recommended)
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/thiruk/logmonster/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/thirukguru/logmonster/main/install.sh | bash
 ```
 
 ### From Source
 
 ```bash
-git clone https://github.com/thiruk/logmonster.git
+git clone https://github.com/thirukguru/logmonster.git
 cd logmonster
 make build
 sudo mv bin/logmonster /usr/local/bin/
