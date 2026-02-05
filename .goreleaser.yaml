@@ -1,0 +1,60 @@
+# Project settings
+PROJECT_NAME := logmonster
+REPO := github.com/thiruk/logmonster
+
+# Build configuration
+builds:
+  - id: logmonster
+    main: ./cmd/logmonster
+    binary: logmonster
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+
+# Archive configuration
+archives:
+  - id: default
+    name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}"
+    format: binary
+
+# Checksum
+checksum:
+  name_template: 'checksums.txt'
+
+# Snapshot versioning
+snapshot:
+  name_template: "{{ incpatch .Version }}-next"
+
+# Changelog
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^ci:'
+      - Merge pull request
+      - Merge branch
+
+# Release configuration
+release:
+  github:
+    owner: thiruk
+    name: logmonster
+  draft: false
+  prerelease: auto
+  name_template: "v{{.Version}}"
+
+# Announce
+announce:
+  skip: true
